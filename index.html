@@ -1,13 +1,90 @@
+<!DOCTYPE html>
 <html>
-    <head><script type="module" src="https://md-block.verou.me/md-block.js"></script></head>
- 
-    <body>
-        <md-block>
-# Jessi Stark
+<head>
+<script type="module" src="https://md-block.verou.me/md-block.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    :root {
+        /* colour scheme */
+        --primary: #353535;
+        --secondary: #D9D9D9;
+        --accent1: #3C6E71;
+        --accent2: #284B63;
+        --base: #FFFFFF;
+    }
 
-## A PhD student in computer science at the University of Toronto.
+    body {
+        font-family: "Courier", serif;
+        background-color: var(--base);
+    }
 
-### This website is undergoing a move. Check back soon.
-        </md-block>
-    </body>
-</html>
+
+    .sidenav {
+        height: 100%;
+        width: 160px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: var(--primary);
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+
+    .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 14px;
+        color: var(--secondary);
+        display: block;
+    }
+
+    .sidenav a:hover {
+        color: var(--accent1);
+    }
+
+    h1 {
+        color: var(--accent1);
+        margin-bottom: 0px;
+    }
+    h2 {
+        color: var(--accent2);
+        margin-top: 0px;
+    }
+
+
+    .main {
+        margin-left: 160px; /* Same as the width of the sidenav */
+        font-size: 16px;
+        color: var(--primary);
+        padding: 0px 10px;
+    }
+
+    @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+    }
+</style>
+</head>
+
+<body>
+
+<div class="sidenav">
+  <a href="#about"><b>About Me</b></a>
+  <a href="#publications"><b>Publications</b></a>
+  <a href="#projects"><b>Projects</b></a>
+  <a href="#contact"><b>Contact</b></a>
+</div>
+
+<div class="main">
+    <md-block>
+        # Jessi Stark
+        ## Computer Science PhD Student & HCI Researcher
+        
+        This website is undergoing a move... check back soon...
+        
+    </md-block>
+</div>
+   
+</body>
+</html> 
