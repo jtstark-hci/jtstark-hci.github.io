@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script type="module" src="https://md-block.verou.me/md-block.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
     :root {
@@ -10,7 +9,6 @@
         --secondary: #D9D9D9;
         --accent1: #3C6E71;
         --accent2: #124649;
-        /* --accent2: #284B63; */
         --base: #FFFFFF;
     }
 
@@ -51,11 +49,13 @@
     h2 {
         color: var(--accent2);
         margin-top: 0px;
+        margin-bottom: 0px;
     }
 
 
     .main {
         margin-left: 160px; /* Same as the width of the sidenav */
+        margin-right: 160px;
         font-size: 16px;
         color: var(--primary);
         padding: 0px 10px;
@@ -71,20 +71,34 @@
 <body>
 
 <div class="sidenav">
-  <a href="#about"><b>About Me</b></a>
+  <a href="#aboutme"><b>About Me</b></a>
   <a href="#publications"><b>Publications</b></a>
   <a href="#projects"><b>Projects</b></a>
   <a href="#contact"><b>Contact</b></a>
 </div>
 
 <div class="main">
-    <md-block>
-        # Jessi Stark
-        ## Computer Science PhD Student & HCI Researcher
-        
-        This website is undergoing a move... check back soon...
-        
-    </md-block>
+    <h1>Jessi Stark</h1>
+    <h2>Computer Science PhD Student & HCI Researcher</h2>
+    <h2>University of Toronto</h2>
+    
+    <div id="aboutme">
+        <p>Greetings! Let me tell you a bit about what I do.</p> 
+    
+        <p>I work in the field of human-computer interaction (HCI) research, which is a fancy way of saying I think a lot about how humans use technology. 
+            These days, I am particularly interested in how creative writers engage with writing support tools 
+            and how such tools can be designed to better support creative writers.</p>
+    
+        <p>In the past, my research focused on creativity support tools for novice makers in makerspaces. 
+            I explored multi-perspective video interfaces to support 3D assembly tasks, 
+            and instrumented a makerspace to increase the situation awareness of novices in the space.</p>
+    
+        <p>Since Fall 2020, I have been a PhD student in the Computer Science department at the University of Toronto, supervised by Dr. Daniel Wigdor. 
+            In 2020, I also completed my MSc in Computer Science at the University of Calgary, supervised by Dr. Ehud Sharlin and Dr. Anthony Tang.
+            I received my BSc in Computer Science from the University of Calgary in 2017, during which I dabbled in human-robot interaction research.
+            Before entering the world of computer science, I studied journalism and embarked on a brief and morbid career editing obituaries.</p>
+    </div>
+   
 </div>
    
 </body>
