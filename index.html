@@ -43,13 +43,23 @@
     }
 
     h1 {
-        color: var(--accent1);
+        color: var(--accent2);
         margin-bottom: 0px;
     }
     h2 {
-        color: var(--accent2);
+        color: var(--accent1);
         margin-top: 0px;
         margin-bottom: 0px;
+    }
+    h3{
+        color: var(--accent1);
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    hr{
+        background-color: var(--accent2);
+        height: 3px;
+        opacity: 0.25;
     }
 
 
@@ -73,19 +83,25 @@
 <div class="sidenav">
   <a href="#aboutme"><b>About Me</b></a>
   <a href="#publications"><b>Publications</b></a>
-  <a href="#projects"><b>Projects</b></a>
+  <a href="#cv"><b>CV</b></a>
   <a href="#contact"><b>Contact</b></a>
 </div>
 
 <div class="main">
-    <h1>Jessi Stark</h1>
-    <h2>Computer Science PhD Student & HCI Researcher</h2>
-    <h2>University of Toronto</h2>
+    <div>
+        <h1>Jessi Stark</h1>
+        <h2>HCI Researcher</h2>
+        <h3>PhD Student at the University of Toronto</h3>
+    </div>
     
+    <div style="margin-top: 30px; margin-bottom: 30px">
+        <h3>This website is undergoing a move so some information might be missing. In the meantime, you can go <a href="https://jtstarkcom.wordpress.com" target="_blank">here</a> to find it.</h3>
+    </div>
+
     <div id="aboutme">
         <p>Greetings! Let me tell you a bit about what I do.</p> 
     
-        <p>I work in the field of human-computer interaction (HCI) research, which is a fancy way of saying I think a lot about how humans use technology. 
+        <p>As a human-computer interaction researcher, I think a lot about how humans use technology. 
             These days, I am particularly interested in how creative writers engage with writing support tools 
             and how such tools can be designed to better support creative writers.</p>
     
@@ -97,6 +113,15 @@
             In 2020, I also completed my MSc in Computer Science at the University of Calgary, supervised by Dr. Ehud Sharlin and Dr. Anthony Tang.
             I received my BSc in Computer Science from the University of Calgary in 2017, during which I dabbled in human-robot interaction research.
             Before entering the world of computer science, I studied journalism and embarked on a brief and morbid career editing obituaries.</p>
+    </div>
+
+    <hr>
+
+    <div id="Publications">
+        <h2>Publications</h2>
+        <h3>Full papers</h3>
+        <h3>Workshop submissions</h3>
+        <h3>Posters</h3>
     </div>
    
 </div>
