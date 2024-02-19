@@ -60,6 +60,10 @@
         background-color: var(--accent2);
         height: 3px;
         opacity: 0.25;
+        margin-top: 70px;
+    }
+    a{
+        color:var(--accent2);
     }
 
 
@@ -69,6 +73,23 @@
         font-size: 16px;
         color: var(--primary);
         padding: 0px 10px;
+    }
+
+    .bottom {
+        opacity:0.75;
+        margin-top:200px;
+    }
+
+    .bottom hr {
+        height: 1px;
+    }
+
+    .bottom p {
+        text-align: center;
+        font-size: 9px;
+        font-style:var(--accent1);
+        margin-left:150px;
+        margin-right:150px;
     }
 
     @media screen and (max-height: 450px) {
@@ -82,6 +103,7 @@
 
 <div class="sidenav">
   <a href="#aboutme"><b>About Me</b></a>
+  <a href="#myresearch"><b>My Research</b></a>
   <a href="#publications"><b>Publications</b></a>
   <a href="#cv"><b>CV</b></a>
   <a href="#contact"><b>Contact</b></a>
@@ -91,7 +113,7 @@
     <div>
         <h1>Jessi Stark</h1>
         <h2>HCI Researcher</h2>
-        <h3>PhD Student at the University of Toronto</h3>
+        <h3>PhD Candidate at the University of Toronto</h3>
     </div>
     
     <div style="margin-top: 30px; margin-bottom: 30px">
@@ -109,19 +131,57 @@
             I explored multi-perspective video interfaces to support 3D assembly tasks, 
             and instrumented a makerspace to increase the situation awareness of novices in the space.</p>
     
-        <p>Since Fall 2020, I have been a PhD student in the Computer Science department at the University of Toronto, supervised by Dr. Daniel Wigdor. 
-            In 2020, I also completed my MSc in Computer Science at the University of Calgary, supervised by Dr. Ehud Sharlin and Dr. Anthony Tang.
+        <p>Since Fall 2020, I have been a PhD student in the Computer Science department at the University of Toronto, supervised by <a href="https://danielwigdor.com/" target="_blank">Dr. Daniel Wigdor</a>. 
+            In 2020, I also completed my MSc in Computer Science at the University of Calgary, supervised by <a href="https://utouch.cpsc.ucalgary.ca/index.html" target="_blank">Dr. Ehud Sharlin</a> and <a href="https://hcitang.github.io/" target="_blank">Dr. Anthony Tang</a>.
             I received my BSc in Computer Science from the University of Calgary in 2017, during which I dabbled in human-robot interaction research.
             Before entering the world of computer science, I studied journalism and embarked on a brief and morbid career editing obituaries.</p>
     </div>
 
     <hr>
 
-    <div id="Publications">
+    <div id="myresearch">
+        <h2>My Research</h2>
+        <p>My research delves into the dynamics between creative fiction writers and AI-driven writing support tools, 
+            focusing on mitigating frictions that arise while ensuring the writer's sense of ownership over the text remains intact. 
+            Specifically, I explore the potential of Large Language Model-based writing tools (LLMs) to assist fiction writers 
+            without encroaching on their creative autonomy. In my upcoming study, I will investigate innovative approaches leveraging 
+            LLMs to enhance fiction writing experiences through the development of a Google Docs add-on, currently under construction. 
+            This tool boasts features such as character profiling and relationship mapping, enabling writers to maintain consistency 
+            and coherence within their narratives. Derived from insights garnered in previous research, these features address identified 
+            writing challenges and preserve the writer's sense of ownership. My implementation of these functionalities involves 
+            adept manipulation of prompts to optimize LLM outputs, task decomposition to manage model responses, and robust handling of unpredictable model outputs.</p>
+    </div>
+
+    <hr>
+
+    <div id="publications">
         <h2>Publications</h2>
         <h3>Full papers</h3>
         <h3>Workshop submissions</h3>
         <h3>Posters</h3>
+    </div>
+
+    <hr>
+
+    <div id="cv">
+        <h2>CV</h2>
+
+        <p>Read it <a href="files/Jessi_Stark_CV.pdf" target="_blank" type="application/pdf">here</a>.</p>
+    </div>
+
+    <hr>
+
+    <div id="contact">
+        <h2>Contact</h2>
+        <p>Email me at jtstark@dgp.toronto.edu</p>
+    </div>
+
+    <div class="bottom" id="bottom">
+        <div style="margin-right: 200px; margin-left: 200px">
+            <hr/>
+        </div>
+
+        <p>This website has been assembled using various html snippets found online and altered to suit my preference.</p>
     </div>
    
 </div>
