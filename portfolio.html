@@ -92,26 +92,105 @@
         margin-right:150px;
     }
 
+    /* Style the button that is used to open and close the collapsible content */
+    .collapsible {
+        background-color: var(--secondary);
+        color: var(--accent2);
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+    }
+
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .active, .collapsible:hover {
+        background-color: #ccc;
+    }
+
+    /* Style the collapsible content. Note: hidden by default */
+    .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
+    }
+
     @media screen and (max-height: 450px) {
         .sidenav {padding-top: 15px;}
         .sidenav a {font-size: 18px;}
     }
 </style>
+
+
 </head>
 
 <body>
 
 <div class="sidenav">
-  <a href="#aboutme"><b>About Me</b></a>
-  <a href="#myresearch"><b>My Research</b></a>
-  <a href="#publications"><b>Publications</b></a>
-  <a href="#cv"><b>CV</b></a>
-  <a href="#contact"><b>Contact</b></a>
+    <a href="#intro"><b>(top)</b></a>
+    <a href="#LLM"><b>LLMs</b></a>
+    <a href="#myresearch"><b>Remote guidance</b></a>
+    <a href="#publications"><b>Makerspaces</b></a>
+    <a href="#cv"><b>Human-robot interaction</b></a>
+    <a href="#contact"><b>Commercial</b></a>
 </div>
 
 <div class="main">
+    <div>
+        <h1>Jessi Stark</h1>
+        <h2>UX Designer & HCI Researcher</h2>
+        <h3>Dynamic Graphics Project, University of Toronto</h3>
+    </div>
+
+    <div id="intro">
+        <p>Welcome to my UX portfolio. Here you'll find examples of systems I've designed and built for academic research 
+            topics in human-computer interaction, including creative collaboration with large language models
+             (LLMs), remote guidance for physical activity via ungrounded haptics, using instructional tools 
+             in makerspaces, and performing collaborative tasks with robots. You'll also see examples of my 
+             commercial designs for real-time collaboration support.</p>
+
+        <p>Use the links in the sidebar to view specific projects, or just keep scrolling to see them all!</p>
+    </div>
+
+    <div id="LLM">
+        <button id="llm_section" type="button" class="collapsible">
+            <h2>
+                Creative collaboration with Large Language Models (LLMs)
+            </h2>
+        </button>
+
+        <div class="llm_section_content">
+            <video controls width="1000">
+                <source src="files/Portfolio/CharacterProfiles.mp4" type="video/mp4" />
+            </video>
+        </div>
+
+    </div>
+
 
 </div>
+
+<script>
+
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+        content.style.display = "none";
+        } else {
+        content.style.display = "block";
+        }
+    });
+    }
+
+</script>
 
 </body>
 </html>
