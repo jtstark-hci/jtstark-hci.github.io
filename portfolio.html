@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 <style>
     :root {
         /* colour scheme */
@@ -15,6 +16,14 @@
     body {
         font-family: "Courier", serif;
         background-color: var(--base);
+    }
+
+    .material-symbols-outlined {
+        font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24;
     }
 
 
@@ -94,7 +103,7 @@
 
     /* Style the button that is used to open and close the collapsible content */
     .collapsible {
-        background-color: var(--secondary);
+        background-color: var(--base);
         color: var(--accent2);
         cursor: pointer;
         padding: 18px;
@@ -103,6 +112,7 @@
         text-align: left;
         outline: none;
         font-size: 15px;
+        font-family: "Courier", serif;
     }
 
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -124,22 +134,21 @@
     }
 </style>
 
-
 </head>
 
 <body>
 
 <div class="sidenav">
-    <a href="#intro"><b>(top)</b></a>
+    <a href="#tippy_top"><b>(top)</b></a>
     <a href="#LLM"><b>LLMs</b></a>
-    <a href="#myresearch"><b>Remote guidance</b></a>
-    <a href="#publications"><b>Makerspaces</b></a>
-    <a href="#cv"><b>Human-robot interaction</b></a>
-    <a href="#contact"><b>Commercial</b></a>
+    <a href="#haptics"><b>Remote guidance</b></a>
+    <a href="#makerspaces"><b>Makerspaces</b></a>
+    <a href="#hri"><b>Human-robot collaboration</b></a>
+    <a href="#commercial"><b>Commercial</b></a>
 </div>
 
-<div class="main">
-    <div>
+<div class="main" style="margin-bottom:50px">
+    <div id="tippy_top">
         <h1>Jessi Stark</h1>
         <h2>UX Designer & HCI Researcher</h2>
         <h3>Dynamic Graphics Project, University of Toronto</h3>
@@ -152,20 +161,103 @@
              in makerspaces, and performing collaborative tasks with robots. You'll also see examples of my 
              commercial designs for real-time collaboration support.</p>
 
-        <p>Use the links in the sidebar to view specific projects, or just keep scrolling to see them all!</p>
+        
     </div>
 
     <div id="LLM">
         <button id="llm_section" type="button" class="collapsible">
             <h2>
+                <span class="material-symbols-outlined">
+                    expand_circle_right
+                </span>
                 Creative collaboration with Large Language Models (LLMs)
             </h2>
         </button>
 
-        <div class="llm_section_content">
-            <video controls width="1000">
+        <div class="llm_section_content" hidden style="margin-left:20px">
+            <h3>Character Profiles</h3>
+            <video controls width="100%">
                 <source src="files/Portfolio/CharacterProfiles.mp4" type="video/mp4" />
             </video>
+        </div>
+
+    </div>
+
+    <div id="haptics">
+        <button id="haptic_section" type="button" class="collapsible">
+            <h2>
+                <span class="material-symbols-outlined">
+                    expand_circle_right
+                </span>
+                Remote guidance for physical activity
+            </h2>
+        </button>
+
+        <div class="haptic_section_content" hidden style="margin-left:20px">
+            <h3>Stuff</h3>
+           <!-- <video controls width="100%">
+                <source src="files/Portfolio/CharacterProfiles.mp4" type="video/mp4" />
+            </video> -->
+        </div>
+
+    </div>
+
+    <div id="makerspaces">
+        <button id="makerspace_section" type="button" class="collapsible">
+            <h2>
+                <span class="material-symbols-outlined">
+                    expand_circle_right
+                </span>
+                Instructional tools for makers in makerspaces
+            </h2>
+        </button>
+
+        <div class="makerspace_section_content" hidden style="margin-left:20px">
+            <h3>Stuff</h3>
+           <!-- <video controls width="100%">
+                <source src="files/Portfolio/CharacterProfiles.mp4" type="video/mp4" />
+            </video> -->
+        </div>
+
+    </div>
+
+
+    <div id="hri">
+        <button id="hri_section" type="button" class="collapsible">
+            <h2>
+                <span class="material-symbols-outlined">
+                    expand_circle_right
+                </span>
+                Human-robot collaboration
+            </h2>
+        </button>
+
+        <div class="hri_section_content" hidden style="margin-left:20px">
+            <h3>Stuff</h3>
+           <!-- <video controls width="100%">
+                <source src="files/Portfolio/CharacterProfiles.mp4" type="video/mp4" />
+            </video> -->
+        </div>
+
+    </div>
+
+
+
+    <div id="commercial">
+        <button id="commercial_section" type="button" class="collapsible">
+            <h2>
+                <span class="material-symbols-outlined">
+                    expand_circle_right
+                </span>
+                Commercial examples
+            </h2>
+        </button>
+
+        <div class="commercial_section_content" hidden style="margin-left:20px">
+            <h3>Nureva: real-time collaboration support</h3>
+           <!-- <video controls width="100%">
+                <source src="files/Portfolio/CharacterProfiles.mp4" type="video/mp4" />
+            </video> -->
         </div>
 
     </div>
@@ -191,6 +283,5 @@
     }
 
 </script>
-
 </body>
 </html>
