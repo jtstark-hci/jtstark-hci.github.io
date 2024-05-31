@@ -28,6 +28,15 @@ body {
         'opsz' 24;
 }
 
+.material-symbols-outlined-small {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+    font-size: smaller;
+}
+
 
 .sidenav {
     height: 100%;
@@ -73,6 +82,13 @@ hr{
     opacity: 0.25;
     margin-top: 70px;
 }
+
+em{
+    font-weight: 700;
+    font-style: inherit;
+    color: var(--accent1);
+}
+
 a{
     color:var(--accent2);
 }
@@ -133,7 +149,6 @@ a{
     padding: 0 18px;
     display: none;
     overflow: hidden;
-    background-color: #f1f1f1;
     margin-right: 160px;
 }
 
