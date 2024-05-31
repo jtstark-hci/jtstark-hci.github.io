@@ -3,136 +3,10 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-<style>
-    :root {
-        /* colour scheme */
-        --primary: #353535;
-        --secondary: #D9D9D9;
-        --accent1: #3C6E71;
-        --accent2: #124649;
-        --base: #FFFFFF;
-    }
-
-    body {
-        font-family: "Courier", serif;
-        background-color: var(--base);
-    }
-
-    .material-symbols-outlined {
-        font-variation-settings:
-            'FILL' 0,
-            'wght' 400,
-            'GRAD' 0,
-            'opsz' 24;
-    }
-
-
-    .sidenav {
-        height: 100%;
-        width: 160px;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: var(--primary);
-        overflow-x: hidden;
-        padding-top: 20px;
-    }
-
-    .sidenav a {
-        padding: 6px 8px 6px 16px;
-        text-decoration: none;
-        font-size: 14px;
-        color: var(--secondary);
-        display: block;
-    }
-
-    .sidenav a:hover {
-        color: var(--accent1);
-    }
-
-    h1 {
-        color: var(--accent2);
-        margin-bottom: 0px;
-    }
-    h2 {
-        color: var(--accent1);
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-    h3{
-        color: var(--accent1);
-        margin-top: 0px;
-        margin-bottom: 0px;
-    }
-    hr{
-        background-color: var(--accent2);
-        height: 3px;
-        opacity: 0.25;
-        margin-top: 70px;
-    }
-    a{
-        color:var(--accent2);
-    }
-
-
-    .main {
-        margin-left: 160px; /* Same as the width of the sidenav */
-        margin-right: 160px;
-        font-size: 16px;
-        color: var(--primary);
-        padding: 0px 10px;
-    }
-
-    .bottom {
-        opacity:0.75;
-        margin-top:200px;
-    }
-
-    .bottom hr {
-        height: 1px;
-    }
-
-    .bottom p {
-        text-align: center;
-        font-size: 9px;
-        font-style:var(--accent1);
-        margin-left:150px;
-        margin-right:150px;
-    }
-
-    /* Style the button that is used to open and close the collapsible content */
-    .collapsible {
-        background-color: var(--base);
-        color: var(--accent2);
-        cursor: pointer;
-        padding: 18px;
-        width: 100%;
-        border: none;
-        text-align: left;
-        outline: none;
-        font-size: 15px;
-        font-family: "Courier", serif;
-    }
-
-    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-    .active, .collapsible:hover {
-        background-color: #ccc;
-    }
-
-    /* Style the collapsible content. Note: hidden by default */
-    .content {
-        padding: 0 18px;
-        display: none;
-        overflow: hidden;
-        background-color: #f1f1f1;
-    }
-
-    @media screen and (max-height: 450px) {
-        .sidenav {padding-top: 15px;}
-        .sidenav a {font-size: 18px;}
-    }
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 
 </head>
 
@@ -167,8 +41,11 @@
     <div id="LLM">
         <button id="llm_section" type="button" class="collapsible">
             <h2>
-                <span class="material-symbols-outlined">
+                <span name="closed_icon" class="material-symbols-outlined" style="display:inline">
                     expand_circle_right
+                </span>
+                <span name="opened_icon" class="material-symbols-outlined" style="display:none">
+                    expand_circle_down
                 </span>
                 Creative collaboration with Large Language Models (LLMs)
             </h2>
@@ -186,8 +63,11 @@
     <div id="haptics">
         <button id="haptic_section" type="button" class="collapsible">
             <h2>
-                <span class="material-symbols-outlined">
+                <span name="closed_icon" class="material-symbols-outlined" style="display:inline">
                     expand_circle_right
+                </span>
+                <span name="opened_icon" class="material-symbols-outlined" style="display:none">
+                    expand_circle_down
                 </span>
                 Remote guidance for physical activity
             </h2>
@@ -205,8 +85,11 @@
     <div id="makerspaces">
         <button id="makerspace_section" type="button" class="collapsible">
             <h2>
-                <span class="material-symbols-outlined">
+                <span name="closed_icon" class="material-symbols-outlined" style="display:inline">
                     expand_circle_right
+                </span>
+                <span name="opened_icon" class="material-symbols-outlined" style="display:none">
+                    expand_circle_down
                 </span>
                 Instructional tools for makers in makerspaces
             </h2>
@@ -225,8 +108,11 @@
     <div id="hri">
         <button id="hri_section" type="button" class="collapsible">
             <h2>
-                <span class="material-symbols-outlined">
+                <span name="closed_icon" class="material-symbols-outlined" style="display:inline">
                     expand_circle_right
+                </span>
+                <span name="opened_icon" class="material-symbols-outlined" style="display:none">
+                    expand_circle_down
                 </span>
                 Human-robot collaboration
             </h2>
@@ -246,8 +132,11 @@
     <div id="commercial">
         <button id="commercial_section" type="button" class="collapsible">
             <h2>
-                <span class="material-symbols-outlined">
+                <span name="closed_icon" class="material-symbols-outlined" style="display:inline">
                     expand_circle_right
+                </span>
+                <span name="opened_icon" class="material-symbols-outlined" style="display:none">
+                    expand_circle_down
                 </span>
                 Commercial examples
             </h2>
@@ -272,12 +161,20 @@
 
     for (i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function() {
+
         this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-        content.style.display = "none";
+        var sectionContent = this.nextElementSibling;
+
+        if (sectionContent.style.display === "block") {
+
+            sectionContent.style.display = "none";
+            this.querySelector('span[name="closed_icon"]').style.display = "inline";
+            this.querySelector('span[name="opened_icon"]').style.display = "none";
+
         } else {
-        content.style.display = "block";
+            sectionContent.style.display = "block";
+            this.querySelector('span[name="closed_icon"]').style.display = "none";
+            this.querySelector('span[name="opened_icon"]').style.display = "inline";
         }
     });
     }
