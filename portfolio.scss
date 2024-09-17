@@ -1,0 +1,105 @@
+
+/* flexbox prefixing */
+@mixin flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+  
+  @mixin flex($values) {
+    -webkit-box-flex: $values;
+    -moz-box-flex:  $values;
+    -webkit-flex:  $values;
+    -ms-flex:  $values;
+    flex:  $values;
+  }
+  
+  @mixin order($val) {
+    -webkit-box-ordinal-group: $val;  
+    -moz-box-ordinal-group: $val;     
+    -ms-flex-order: $val;     
+    -webkit-order: $val;  
+    order: $val;
+  }
+
+  /* MY STYLES */
+  @mixin BOLD_Header {
+    font-family: "Vina Sans";
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  @mixin BOLD_Subhead {
+    font-family: "Fjalla One";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px; /* 104.167% */
+    text-transform: uppercase;
+  }
+
+  @mixin BOLD_Body_Text {
+    font-family: "Fjalla One";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+
+  
+:root {
+    /* colour scheme */
+    --Basically-White: #E0E0E0;
+
+    --BOLD-Accent-1: #EE10AB;
+    --BOLD-Accent-2: #F276CD;
+    --BOLD-Text: #FADEF1;
+    --BOLD-Background: #444;
+
+}
+
+body {
+    margin: 50;
+    line-height: normal;
+}
+
+  .flex-container {
+    @include flexbox();
+
+    
+  }
+  
+  .flex-item {
+    @include flex(1 200px);
+    @include order(2);
+
+    
+  }
+
+
+
+
+
+
+
+/* laptops */
+@media screen and (max-width: 1200px) {
+
+}
+
+/* tablets */
+@media screen and (max-width: 992px) {
+    
+}
+
+/* phones */
+@media screen and (max-width: 768px) {
+    
+}
+
+
