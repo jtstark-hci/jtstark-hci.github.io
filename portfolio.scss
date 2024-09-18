@@ -46,7 +46,7 @@
     font-family: "Fjalla One";
     font-size: 18px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 100;
     line-height: normal;
   }
 
@@ -70,6 +70,8 @@
 }
 
 body {
+    @include scrollbar(none);
+    overflow-y:hidden;
     background-color: var(--BOLD-Background);
     margin: 0;
     padding: 0;
@@ -111,7 +113,7 @@ body {
     border: 3px solid var(--BOLD-Accent-2);
     padding: 24px;
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 28px;
     max-height: fit-content;
   }
 
@@ -131,8 +133,10 @@ body {
   }
 
   .project-summary-text {
+    @include flexbox();
     @include flex(1 1 auto);
     @include order(2);
+    flex-direction: column;
     max-width: 50%;
 
   }
