@@ -1,0 +1,129 @@
+/* flexbox prefixing */
+/* MY STYLES */
+:root {
+  /* colour scheme */
+  --Basically-White: #E0E0E0;
+  --BOLD-Accent-1: #EE10AB;
+  --BOLD-Accent-2: #F276CD;
+  --BOLD-Text: #FADEF1;
+  --BOLD-Background: #444;
+}
+
+body {
+  background-color: var(--BOLD-Background);
+  margin: 0;
+  padding: 0;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-item {
+  flex: 1 200px auto;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+
+.title-area {
+  display: flex;
+  flex: 1 200px;
+  order: 1;
+  flex-direction: column;
+}
+
+.content-area {
+  display: flex;
+  flex: 2 200px;
+  order: 2;
+  -webkit-scrollbar: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  flex-direction: column;
+  padding: 50px;
+  overflow-y: scroll;
+}
+
+.project-summary-card {
+  display: flex;
+  flex: 1 200px auto;
+  flex-direction: column;
+  border-radius: 20px;
+  border: 3px solid var(--BOLD-Accent-2);
+  padding: 24px;
+  margin: 0;
+  margin-bottom: 10px;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+
+.project-summary-content {
+  display: flex;
+  flex: 1 200px auto;
+  margin: 0;
+  gap: 18px;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+
+.project-summary-image {
+  flex: 1 1 auto;
+  order: 1;
+  max-width: 50%;
+}
+
+.project-summary-text {
+  flex: 1 1 auto;
+  order: 2;
+  max-width: 50%;
+}
+
+p {
+  font-family: "Fjalla One";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--BOLD-Text);
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Vina Sans";
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100px;
+  color: var(--BOLD-Accent-1);
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  font-family: "Fjalla One";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 104.167% */
+  text-transform: uppercase;
+  color: var(--BOLD-Accent-2);
+  padding: 0;
+  margin: 0;
+}
+
+h3 {
+  font-family: "Fjalla One";
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px; /* 104.167% */
+  text-transform: uppercase;
+  color: var(--Basically-White);
+  padding: 0;
+  margin: 0;
+}
+
+/* laptops */
+/* tablets */
+/* phones *//*# sourceMappingURL=portfolio.css.map */

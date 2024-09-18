@@ -30,7 +30,7 @@
     font-size: 128px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 100px;
   }
 
   @mixin BOLD_Subhead {
@@ -44,10 +44,16 @@
 
   @mixin BOLD_Body_Text {
     font-family: "Fjalla One";
-    font-size: 24px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+  }
+
+  @mixin scrollbar($val) {
+    -webkit-scrollbar: $val;
+    -ms-overflow-style: $val;
+    scrollbar-width: $val;
   }
 
 
@@ -64,23 +70,102 @@
 }
 
 body {
-    margin: 50;
-    line-height: normal;
+    background-color: var(--BOLD-Background);
+    margin: 0;
+    padding: 0;
+    
 }
 
   .flex-container {
     @include flexbox();
-
     
   }
   
   .flex-item {
-    @include flex(1 200px);
-    @include order(2);
-
-    
+    @include flex(1 200px auto);
+    max-height: fit-content;
   }
 
+  .title-area {
+    @include flexbox();
+    @include flex(1 200px);
+    @include order(1);
+    flex-direction: column;
+  }
+
+  .content-area {
+    @include flexbox();
+    @include flex(2 200px);
+    @include order(2);
+    @include scrollbar(none);
+    flex-direction: column;
+    padding: 50px;
+    overflow-y: scroll;
+  }
+
+  .project-summary-card {
+    @include flexbox();
+    @include flex(1 200px auto);
+    flex-direction: column;
+    border-radius: 20px;
+    border: 3px solid var(--BOLD-Accent-2);
+    padding: 24px;
+    margin: 0;
+    margin-bottom: 10px;
+    max-height: fit-content;
+  }
+
+  .project-summary-content {
+    @include flexbox();
+    @include flex(1 200px auto);
+    margin: 0;
+    gap: 18px;
+    max-height: fit-content;
+  }
+
+  .project-summary-image {
+    @include flex(1 1 auto);
+    @include order(1);
+    max-width: 50%;
+
+  }
+
+  .project-summary-text {
+    @include flex(1 1 auto);
+    @include order(2);
+    max-width: 50%;
+
+  }
+
+
+
+p {
+    @include BOLD_Body_Text();
+    color: var(--BOLD-Text);
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    @include BOLD_Header();
+    color: var(--BOLD-Accent-1);
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    @include BOLD_Subhead();
+    color: var(--BOLD-Accent-2);
+    padding: 0;
+    margin: 0;
+}
+
+h3 {
+    @include BOLD_Subhead();
+    color: var(--Basically-White);
+    padding: 0;
+    margin: 0;
+}
 
 
 
