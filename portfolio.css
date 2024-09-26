@@ -36,6 +36,13 @@ body {
   flex-direction: column;
 }
 
+.summary-area {
+  -webkit-scrollbar: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: auto;
+}
+
 .content-area {
   display: flex;
   flex: 2 200px;
@@ -86,10 +93,10 @@ body {
 }
 
 p {
-  font-family: "Fjalla One";
-  font-size: 18px;
+  font-family: "Figtree";
+  font-size: 14px;
   font-style: normal;
-  font-weight: 100;
+  font-weight: 400;
   line-height: normal;
   color: var(--BOLD-Text);
   padding: 0;

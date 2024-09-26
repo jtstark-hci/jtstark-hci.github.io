@@ -33,14 +33,6 @@
     line-height: 100px;
   }
 
-  @mixin BOLD_SmallHeader {
-    font-family: "Vina Sans";
-    font-size: 128px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 100px;
-  }
-
   @mixin BOLD_Subhead {
     font-family: "Fjalla One";
     font-size: 48px;
@@ -51,10 +43,10 @@
   }
 
   @mixin BOLD_Body_Text {
-    font-family: "Fjalla One";
-    font-size: 18px;
+    font-family: "Figtree";
+    font-size: 14px;
     font-style: normal;
-    font-weight: 100;
+    font-weight: 400;
     line-height: normal;
   }
 
@@ -101,6 +93,11 @@ body {
     @include flex(1 200px);
     @include order(1);
     flex-direction: column;
+  }
+
+  .summary-area {
+    @include scrollbar(none);
+    overflow-y: auto;
   }
 
   .content-area {
