@@ -1,21 +1,28 @@
 function pageLoaded() {
-    var moreButtons = document.getElementsByClassName("more_button");
+    var moreButtons = document.getElementsByClassName("project-summary-card");
     Array.from(moreButtons).forEach(elem => {
         elem.addEventListener("click", navToProject) }
     );
 
-    document.getElementById("back_button").addEventListener("click", backToMain);
+    var backButtons = document.getElementsByClassName("back-button");
+    Array.from(backButtons).forEach(elem => {
+        elem.addEventListener("click", backToMain) }
+    );
     
 }
 
 
 const navToProject = function () {
     document.getElementById("main_page_content").style.display = "none";
-    document.getElementById("project_page_content").style.display = "flex";
+    document.getElementById(this.id + "_content").style.display = "flex";
+
+    console.log(this.id);
 }
 
 
 const backToMain = function () {
     document.getElementById("main_page_content").style.display = "flex";
-    document.getElementById("project_page_content").style.display = "none";
+
+    hidePageId = this.id.replace("_back", "_content");
+    document.getElementById(hidePageId).style.display = "none";
 }
