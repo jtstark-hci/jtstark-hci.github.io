@@ -142,9 +142,9 @@ body {
     @include flexbox();
     @include flex(1 1 auto);
     @include order(2);
-    flex-direction: column;
+    flex-direction:column;
     max-width: 50%;
-
+    justify-content: space-between;
   }
 
 
@@ -155,6 +155,15 @@ p {
     padding: 0;
     margin: 0;
 }
+  .truncate-overflow {
+    display: -webkit-box;
+    line-clamp: 7;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    text-overflow:ellipsis;
+    word-wrap:break-word;
+    overflow:hidden;
+  }
 
 h1 {
     @include BOLD_Header();
